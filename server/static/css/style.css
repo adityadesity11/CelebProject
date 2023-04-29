@@ -1,0 +1,22 @@
+.inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .my-img {
+    border-radius: 500px;
+    margin: 5px;
+    padding: 10px;
+  }
+  .img-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+
+
+

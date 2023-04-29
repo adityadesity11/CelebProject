@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css' )}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Heading  -->
+    <div class="container-fluid" style="background-color: rgb(93, 78, 227); display: flex; justify-content: center; color: azure;">
+                    <h2>Celebrity Face Classification</h2>
+    </div>
+
+
+    <!-- Div containing Images -->
+    <div class="container-fluid my-box" style="background-color: rgb(220, 227, 234);">
+        <div class="row">
+
+            <div class="col-sm-2 img-div"><img src="{{url_for('static', filename ='images/virat.jpg')}}"
+                    class="img-thumbnail" alt="..."  >
+                <p>Virat Kohli</p>
+            </div>
+            <div class="col-sm-2 img-div"><img src="{{url_for('static', filename ='images/messi.jpg')}}"
+                    class="img-thumbnail" alt="..." >
+                <p>Lionel Messi</p>
+            </div>
+            <div class="col-sm-2 img-div"><img src="{{url_for('static', filename ='images/sharapova.jfif')}}"
+                    class="img-thumbnail" alt="..." >
+                <p>Maria Sharapova</p>
+            </div>
+            <div class="col-sm-2 img-div"><img src="{{url_for('static', filename ='images/federer.jpeg')}}" class="img-thumbnail" alt="..." >
+                <p>Federer</p>
+            </div>
+            <div class="col-sm-2 img-div"><img src="{{url_for('static', filename ='images/serena.jpg')}}"
+                    class="img-thumbnail" alt="..." >
+                <p>Serena Williams</p>
+            </div>
+            <form action="/classify_image"  method="post" class="col-sm-2">
+                <div class=" img-div">
+                    <img src="{{url_for('static', filename ='images/upload.png')}}"
+                    class="img-thumbnail" alt="...">
+                    <p><input type="file" class="form-control " id="exampleInputPassword1" name="image" required></p>
+                    <button type="submit" class="btn btn-primary m-lg-5">Submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- <form action="/classify_image" method="post">
+            <div class="mb-3 m-lg-5">
+                <label for="" class="form-label">Upload the image</label>
+                <input type="file" class="form-control bg-info" id="exampleInputPassword1" name="image" required>
+            </div>
+            <button type="submit" class="btn btn-primary m-lg-5">Submit</button>
+        </form> -->
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
